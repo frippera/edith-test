@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.Container {
+  flex: 1;
+  min-width: 250px;
+  max-width: 1920px;
+  
+}
+
+.Menu {
+  height: 50px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.MenuItem {
+  display: flex;
+  align-items: center;
+}
+
+.MenuLink {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #222;
+}
+
+.MenuLinkMobile {
+  display: none;
+  cursor: pointer;
+}
+
+.Logo {
+  width: 125px;
+  height: 55px;
+}
+
+.Divider {
+  background-image: url("./checked-border.png");
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 20px;
+  background-repeat: round;
+}
+
+.Footer {
+  height: 100px;
+  background-color: rgb(46, 46, 46);
+}
+
+@media only screen and (max-width: 600px) {
+  .MenuLink {
+    display: none;
+  }
+
+  .MenuLinkMobile {
+    display: block;
+  }
+}
