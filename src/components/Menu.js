@@ -1,30 +1,36 @@
 import React, { Component } from 'react';
+import { FaBars, FaHeartO, FaHeart } from 'react-icons/lib/fa';
+
+const Favorites = [{"count":"1"}];
 
 class Menu extends Component {
 	render() {
 		return (
 			<div className="Menu">
 				<div className="MenuItem">
-					<span className="MenuLinkMobile">M</span>&nbsp;
+					<span className="MenuLinkMobile"><FaBars size={16} /></span>&nbsp;
 				</div>
 				<div className="MenuItem">
 					<a href="/" className="MenuLink">
-						Länk 1
+						Veckans lunch
 					</a>
 					<a href="/" className="MenuLink">
-						Länk 2
+						Catering
 					</a>
 					<img src="logo.png" className="Logo" alt="Ediths Kök" />
 					<a href="/" className="MenuLink">
-						Länk 3
+						Restaurang
 					</a>
 					<a href="/" className="MenuLink">
-						Länk 4
+						Glass & Cafe
 					</a>
 				</div>
 				<div className="MenuItem">
 					<a href="/" className="MenuLink">
-						Mina Favoriter
+						Favoriter {Favorites.length ? <FaHeartO className="MenuLinkIcon" size={16} /> : <FaHeart className="MenuLinkIcon" size={16} /> }
+					</a>
+					<a href="/" className="MenuLinkFavorite">
+						{Favorites.length ? <FaHeartO className="MenuLinkIcon" size={16} /> : <FaHeart className="MenuLinkIcon" size={16} /> }
 					</a>
 				</div>
 			</div>
