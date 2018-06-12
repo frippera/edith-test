@@ -6,9 +6,24 @@ import Service from '../components/Service';
 import Footer from '../components/Footer';
 
 const Services = [
-	{"src": "images/food1.jpg", "headline":"Veckans lunch", "tagline":"Varje vardag från 89:-"},
-	{"src": "images/food2.jpg", "headline":"Glass & Cafe", "tagline":"Mmm...Marabou!"},
-	{"src": "images/food3.jpg", "headline":"Catering", "tagline":"Hämtmat när den är som bäst..."},
+	{
+		"src": "images/food1.jpg", 
+		"headline":"Veckans lunch", 
+		"tagline":"Varje vardag från 89:-", 
+		"to":"/lunch"
+	},
+	{
+		"src": "images/food2.jpg", 
+		"headline":"Bageri", 
+		"tagline":"Mmm...Marabou!", 
+		"to":"/bakery"
+	},
+	{
+		"src": "images/food3.jpg", 
+		"headline":"Catering", 
+		"tagline":"Hämtmat när den är som bäst...", 
+		"to":"/catering"
+	},
 ];
 
 class Home extends Component {
@@ -21,7 +36,7 @@ class Home extends Component {
 					<div className="Content">
 						{
 							Services.map((service) => {
-								return <Service src={service.src} headline={service.headline} tagline={service.tagline} />;
+								return <Service {...service} />;
 							})
 						}
 					</div>
