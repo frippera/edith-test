@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBars, FaHeartO, FaHeart } from 'react-icons/lib/fa';
 
 const Favorites = [{"count":"1"}];
@@ -11,27 +12,29 @@ class Menu extends Component {
 					<span className="MenuLinkMobile"><FaBars size={16} /></span>&nbsp;
 				</div>
 				<div className="MenuItem">
-					<a href="/" className="MenuLink">
+					<Link to="/" className="MenuLink">
+						Hem
+					</Link>
+					<Link to="/lunch" className="MenuLink">
 						Veckans lunch
-					</a>
-					<a href="/" className="MenuLink">
+					</Link>
+					<Link to="/">
+						<img src="logo.png" className="Logo" alt="Ediths Kök" />
+					</Link>
+					<Link to="/catering" className="MenuLink">
 						Catering
-					</a>
-					<img src="logo.png" className="Logo" alt="Ediths Kök" />
-					<a href="/" className="MenuLink">
-						Restaurang
-					</a>
-					<a href="/" className="MenuLink">
-						Glass & Cafe
-					</a>
+					</Link>
+					<Link to="/bakery" className="MenuLink">
+						Bageri
+					</Link>
 				</div>
 				<div className="MenuItem">
-					<a href="/" className="MenuLink">
+					<Link to="/favorites" className="MenuLink">
 						Favoriter {Favorites.length ? <FaHeartO className="MenuLinkIcon" size={16} /> : <FaHeart className="MenuLinkIcon" size={16} /> }
-					</a>
-					<a href="/" className="MenuLinkFavorite">
+					</Link>
+					<Link to="/favorites" className="MenuLinkFavorite">
 						{Favorites.length ? <FaHeartO className="MenuLinkIcon" size={16} /> : <FaHeart className="MenuLinkIcon" size={16} /> }
-					</a>
+					</Link>
 				</div>
 			</div>
 		);

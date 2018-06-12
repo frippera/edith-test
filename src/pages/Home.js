@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 
-import Menu from './components/Menu';
-import Divider from './components/Divider';
-import Service from './components/Service';
-import Footer from './components/Footer';
+import Menu from '../components/Menu';
+import Divider from '../components/Divider';
+import Service from '../components/Service';
+import Footer from '../components/Footer';
 
 const Services = [
 	{"src": "images/food1.jpg", "headline":"Veckans lunch", "tagline":"Varje vardag från 89:-"},
@@ -12,10 +11,10 @@ const Services = [
 	{"src": "images/food3.jpg", "headline":"Catering", "tagline":"Hämtmat när den är som bäst..."},
 ];
 
-class App extends Component {
+class Home extends Component {
 	render() {
 		return (
-			<div className="App">
+			<div className="Main">
 				<div className="Container">
 					<Menu />
 					<Divider />
@@ -34,4 +33,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default Home;
