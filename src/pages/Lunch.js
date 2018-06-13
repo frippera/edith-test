@@ -4,6 +4,21 @@ import Menu from '../components/Menu';
 import Divider from '../components/Divider';
 import Footer from '../components/Footer';
 
+const Data = [
+	{
+		src: 'images/food1.jpg',
+		headline: 'Veckans lunch',
+		week: 44,
+		days: [
+			{ day: 'Måndag', dish: 'Fisk' },
+			{ day: 'Tisdag', dish: 'Kött' },
+			{ day: 'Onsdag', dish: 'Pasta' },
+			{ day: 'Torsdag', dish: 'Pizza' },
+			{ day: 'Fredag', dish: 'Tacos' },
+		],
+	},
+];
+
 class Lunch extends Component {
 	render() {
 		return (
@@ -12,7 +27,16 @@ class Lunch extends Component {
 					<Menu />
 					<Divider />
 					<div className="Content">
-						Lunch
+						<div>VECKANS LUNCH</div>
+						<div>v.{Data[0].week}</div>
+						{Data[0].days.map(lunch => {
+							return (
+								<div>
+									<div>{lunch.day}</div>
+									<div>{lunch.dish}</div>
+								</div>
+							);
+						})}
 					</div>
 					<Footer />
 					<Divider />

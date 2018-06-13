@@ -1,153 +1,190 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }
 
 .Main {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .Container {
-  flex: 1;
-  min-width: 250px;
-  max-width: 1920px;
+	flex: 1;
+	min-width: 250px;
+	max-width: 1920px;
 }
 
 .Menu {
-  height: 50px;
-  padding: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
+	height: 50px;
+	padding: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
 }
 
 .MenuMobile {
-  /*padding: 10px;*/
-  display: none; /*flex*/
-  flex-direction: column;
-  background-color: #222;
-  text-align: center;
+	display: none;
+	flex-direction: column;
+	background-color: #222;
+	text-align: center;
 }
 
 .MenuMobileLink {
-  text-decoration: none;
-  color: white;
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 1em;
-  padding: 1rem;
+	text-decoration: none;
+	color: white;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	padding: 1rem;
 }
 
 .MenuItem {
-  display: flex;
-  align-items: center;
-  vertical-align: top;
+	display: flex;
+	align-items: center;
+	vertical-align: top;
 }
 
 .MenuLink {
-  margin-right: 20px;
-  margin-left: 10px;
-  text-decoration: none;
-  color: #222;
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 1em;
+	margin-right: 20px;
+	margin-left: 10px;
+	text-decoration: none;
+	color: #222;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 1em;
 }
 
 .MenuLinkIcon {
-  color: rgb(194, 18, 18);
-  margin-left: 2px;
-  margin-bottom: 3px;
+	color: rgb(194, 18, 18);
+	margin-left: 2px;
+	margin-bottom: 3px;
 }
 
 .MenuLinkMobile {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #222;
+	display: none;
+	cursor: pointer;
+	font-size: 24px;
+	color: #222;
 }
 
 .MenuLinkFavorite {
-  display: none;
-  cursor: pointer;
+	display: none;
+	cursor: pointer;
 }
 
 .Logo {
-  width: 125px;
-  height: 55px;
-  margin-left: 20px;
-  margin-right: 20px;
+	width: 125px;
+	height: 55px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .Divider {
-  background-image: url("./checked-border.png");
-  background-repeat: repeat-y round;
-  width: 100%;
-  height: 20px;
+	background-image: url('./checked-border.png');
+	background-repeat: repeat-y round;
+	width: 100%;
+	height: 20px;
 }
 
 .ServiceImage {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-  z-index: 1;
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	z-index: 1;
 }
 
 .ServiceImageOverlay {
-  content:""; 
-  position:absolute; 
-  top:0; 
-  left:0; 
-  bottom:0; 
-  right:0; 
-  background-color: rgba(0,0,0,0.3);
-  z-index: 2;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 2;
 }
 
 .ServiceContent {
-  position: relative;
-  text-align: center;
-  z-index: 0;
+	position: relative;
+	text-align: center;
+	z-index: 0;
 }
 
 .ServiceText {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .ServiceHeader {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 40px;
-  font-weight: bold;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 60px;
+	font-weight: bold;
 }
 
 .ServiceTagline {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 24px;
-  line-height: 1.25;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 36px;
+	line-height: 1.25;
+}
+
+.ButtonOutline {
+	font-family: sans-serif;
+	letter-spacing: 0.7px;
+	font-weight: 600;
+	text-decoration: none;
+	color: white;
+	border: 2px solid white;
+	width: 100px;
+	padding: 10px;
+	margin-top: 25px;
 }
 
 .Footer {
-  height: 100px;
-  background-color: #222;
+	height: 100px;
+	background-color: #222;
+}
+
+@media only screen and (max-width: 1200px) {
+	.ServiceHeader {
+		font-size: 40px;
+		font-weight: bold;
+	}
+
+	.ServiceTagline {
+		font-size: 24px;
+		line-height: 1.25;
+	}
 }
 
 @media only screen and (max-width: 800px) {
-  .MenuLink {
-    display: none;
-  }
+	.MenuLink {
+		display: none;
+	}
 
-  .MenuLinkMobile {
-    display: block;
-  }
+	.MenuLinkMobile {
+		display: block;
+	}
 
-  .MenuLinkFavorite {
-    display: block;
-  }
+	.MenuLinkFavorite {
+		display: block;
+	}
+
+	.ServiceHeader {
+		font-size: 30px;
+		font-weight: bold;
+	}
+
+	.ServiceTagline {
+		font-size: 18px;
+		line-height: 1.25;
+	}
 }
