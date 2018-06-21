@@ -8,21 +8,27 @@ import Footer from '../components/Footer';
 const Services = [
 	{
 		src: 'images/food1.jpg',
-		headline: 'Veckans lunch',
-		tagline: 'Varje vardag från 89:-',
+		headline: 'VECKANS DAGENS',
+		tagline: 'Klicka för att se veckans meny',
 		to: '/lunch',
+	},
+	{
+		src: 'images/food3.jpg',
+		headline: 'CATERING',
+		tagline: 'Beställ din catering här!',
+		to: '/catering',
+	},
+	{
+		src: 'images/food2.jpg',
+		headline: 'RESTAURANG',
+		tagline: 'food!',
+		to: '/rest',
 	},
 	{
 		src: 'images/food2.jpg',
 		headline: 'Bageri',
 		tagline: 'Mmm...capital of fika!',
 		to: '/bakery',
-	},
-	{
-		src: 'images/food3.jpg',
-		headline: 'Catering',
-		tagline: 'Hämtmat när den är som bäst...',
-		to: '/catering',
 	},
 ];
 
@@ -35,7 +41,7 @@ class Home extends Component {
 					<Divider />
 					<div className="Content">
 						{Services.map(service => {
-							return <Service {...service} />;
+							return <Service key={service.to} {...service} />;
 						})}
 					</div>
 					<Footer />

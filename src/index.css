@@ -4,6 +4,16 @@ body {
 	font-family: sans-serif;
 }
 
+@font-face {
+  font-family: 'Timber';
+  src: local('Timber'), url(./fonts/Timber.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir'), url(./fonts/AvenirLTStd45Book.otf) format('opentype');
+}
+
 .Main {
 	display: flex;
 	justify-content: center;
@@ -16,13 +26,13 @@ body {
 }
 
 .Menu {
-	height: 50px;
-	padding: 15px;
+	height: 100px;
+	padding: 10px 15px 0px 15px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
+	
 }
 
 .MenuMobile {
@@ -75,10 +85,11 @@ body {
 }
 
 .Logo {
-	width: 125px;
-	height: 55px;
+	width: 158px;
+	height: 88px;
 	margin-left: 20px;
 	margin-right: 20px;
+	
 }
 
 .Divider {
@@ -90,6 +101,7 @@ body {
 
 .ServiceImage {
 	display: block;
+	height: 320px;
 	width: 100%;
 	object-fit: cover;
 	z-index: 1;
@@ -102,7 +114,6 @@ body {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background-color: rgba(0, 0, 0, 0.3);
 	z-index: 2;
 }
 
@@ -122,18 +133,23 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .ServiceHeader {
-	font-family: 'Libre Franklin', sans-serif;
-	font-size: 60px;
-	font-weight: bold;
+	font-family: 'Timber', sans-serif;
+	font-size: 45px;
+	line-height: 0.8;
+	letter-spacing: 3px;
+	padding-bottom: 3px;
 }
 
 .ServiceTagline {
-	font-family: 'Libre Franklin', sans-serif;
-	font-size: 36px;
-	line-height: 1.25;
+	font-family: 'Avenir', sans-serif;
+	font-size: 16px;
 }
 
 .ButtonOutline {
@@ -150,18 +166,18 @@ body {
 
 .Footer {
 	height: 100px;
-	background-color: #222;
+	background-color: white;
 }
 
 @media only screen and (max-width: 1200px) {
 	.ServiceHeader {
-		font-size: 40px;
-		font-weight: bold;
+		font-size: 45px;
+		/*font-weight: bold;*/
 	}
 
 	.ServiceTagline {
-		font-size: 24px;
-		line-height: 1.25;
+		font-size: 16px;
+		/*line-height: 1.25;*/
 	}
 }
 
@@ -179,12 +195,12 @@ body {
 	}
 
 	.ServiceHeader {
-		font-size: 30px;
-		font-weight: bold;
+		font-size: 45px;
+		/*font-weight: bold;*/
 	}
 
 	.ServiceTagline {
-		font-size: 18px;
-		line-height: 1.25;
+		font-size: 16px;
+		/*line-height: 1.25;*/
 	}
 }
